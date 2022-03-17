@@ -1,0 +1,11 @@
+{% if not candidate %}
+    <p><strong>Кандидата c таким id пока нет:(</strong></p>
+{% else %}
+    <h2>{{candidate.name.upper()}}</h2>
+    <p><strong>Position: </strong><ins>{{candidate.position.upper()}}</ins></p>
+    <img src={{candidate.picture}} width="200">
+    <p><strong>Skills:</strong></p>
+        {% for skill in candidate.skills %}
+        <p><li>{{skill}}</li></p>
+        {% endfor %}
+{% endif %}

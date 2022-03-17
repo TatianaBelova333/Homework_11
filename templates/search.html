@@ -1,0 +1,8 @@
+{% if not candidates %}
+    <p><strong>Кандидатов с таким именем пока нет:(</strong></p>
+{% else %}
+    <h2>Найдено кандидатов - {{number_of_candidates}}</h2>
+    {% for candidate in candidates %}
+        <p><a href="/candidate/{{candidate.id}}", target="blank">{{candidate.name}}</a></p>
+    {% endfor %}
+{% endif %}
